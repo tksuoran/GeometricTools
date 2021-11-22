@@ -1,1 +1,5 @@
 project(gtmathematics VERSION ${GTE_VERSION_MAJOR}.${GTE_VERSION_MINOR})
+set(_target "gtmathematics")
+add_library(${_target} INTERFACE)
+get_filename_component(GTE_DIR ${CMAKE_CURRENT_SOURCE_DIR} DIRECTORY)
+target_include_directories(${_target} INTERFACE ${GTE_DIR})
